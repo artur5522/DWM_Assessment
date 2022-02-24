@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Inicio</title>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link th:href="@{/css/styles.css}" rel="stylesheet" />
+    </head>
+    <body class="bckground">
+        <h1 class="title">Arturo's Proyect</h1>
+        <h2 class="title">Implementation | Rest-Api</h2>
+         <hr>
+        <h2 class="title">>---USERS---<</h2>
+        <div th:if="${users != null}"> 
+            <table border="1" class="table">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Documents</th>                   
+                </tr>                
+                <tr th:each="u : ${users}">
+                    <td th:text="${u.name}"></td>                   
+                    <td th:text="${u.lastName}"></td>
+                    <td><a th:href="@{/checkDocuments/} + ${u.id}" class="a">Go to Documents-></a></td>               
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
