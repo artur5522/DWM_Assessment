@@ -1,12 +1,12 @@
 -Api Rest in the back end with Java, and Thymeleaf in the front to consume the app
 -Built with: Java jdk11, Maven, Springboot, Jpa, Lombok, H2, Thymeleaf and NetBeans
 -Back end: rest api with several endpoints with the requirements
--Front end: html5 (Thymeleaf) consuming the data from the endpoints in the rest api. The front end is embedded in the same proyect for practical purposes only.
+-Front end: html5 (Thymeleaf) consuming the data from the endpoints in the rest api. The front end is embedded in the same project for practical purposes only.
 -Runs in localhost:8080
 -Some clarifications: 
 	-H2 for data storage. User: "sa" , Password: "1234"
 	-A script is runned at starting point filling the users table with some data
-	-All documents uploaded are storaged in the server
+	-All documents uploaded are stored in the server
 	-Each document uploaded are saved in the "statics" section, inside the Users_Files folder, creating a folder for each user if a file is uploaded
 	-Max large file to upload: 2MB
-	-The table "Document" has a field named "path" which contains(as a string) the file path in the server location. This path is relative to the proyect's location.
+	-The table "Document" has a field named "path" which contains(as a string) the file path in the server location. This path is relative to the project's location.
