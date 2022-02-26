@@ -35,15 +35,7 @@
                 </tr>
             </table>             
         </div>
-
-        <!-- todos esos paths son lo mismo. van a ir a buscar a la carpeta donde se almacenan
-        los etaticos, que en este caso es en static. se puede cambiar con 
-        #spring.web.resources.static-locations=file:cualquier/ruta
-        <a th:href="@{http://localhost:8080/css/styles.css}" class="a" download>Download</a>
-        <a th:href="@{/css/styles.css}" class="a" download>Download</a>
-        <a th:href="@{..\consejos.txt}" class="a" download>Download</a>
-        <a th:href="@{~/consejos.txt}" class="a" download>Download</a>
-        -->
+    
         <form th:action="@{/uploadDocuments/} + ${id}" method="post" enctype="multipart/form-data" class="table">      
             <label for="file">Select a file:</label>
             <input type="file" name="file" class="buton" id="file"  /> 
