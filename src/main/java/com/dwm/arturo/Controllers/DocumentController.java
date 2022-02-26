@@ -41,9 +41,6 @@ public class DocumentController {
     @Autowired
     private UserService userService;
 
-//    Response response;
-//    response  = new Response("Server Error: Try again later");
-//    return ResponseEntity.status (HttpStatus.INTERNAL_SERVER_ERROR).body(response);
     @GetMapping("/")
     public ResponseEntity<?> getAllDocuments() {
         Response response;
