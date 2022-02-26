@@ -74,10 +74,9 @@ public class ConsumeApi {
                 //have to prepare the multipart file to send it to the rest api          
                 HttpEntity<MultiValueMap<String, Object>> requestEntity = null;
                 try {
-                    requestEntity = Utils.prepareTheMultiparFile(file);
-                    //rellenar con un mensaje de exito y tratar de redirigir a algun lado
+                    requestEntity = Utils.prepareTheMultiparFile(file);                
                 } catch (IOException ex) {
-                    //rellenar este catch con algo. mensaje de error
+                  
                 }
                 //if everything is in place, I consume the restApi
                 docu = templateRest.postForObject(uriUploadDocument
@@ -101,7 +100,7 @@ public class ConsumeApi {
         //set the new file name 
         docu.setFileName(document.getFileName().concat(document.getExtension()));
 
-        //persis in db the new uploaded file
+        //persist in db the new uploaded file
         docu = templateRest.postForObject(uriModifyDocumentName
                 .concat(userId.toString()), docu, Document.class);
 
